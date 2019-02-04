@@ -18,7 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/home/payment','HomeController@payment');
 //Admin
 Route::get('/admin','AdminController@index')->middleware('auth','checkAdmin'); // check admin
 Route::get('/admin/{id}/edit','AdminController@edit')->middleware('auth','checkAdmin'); // check admin

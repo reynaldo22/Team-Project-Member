@@ -20,19 +20,17 @@
          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                <li class="nav-item navigation">
-                  <a class="nav-link" href="#">Competetion <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="{{url('/admin')}}">Admin <span class="sr-only">(current)</span></a>
                </li>
                <li class="nav-item navigation">
-                  <a class="nav-link" href="#">Team Search</a>
+                  <a class="nav-link" href="{{url('/admin/role')}}">Role</a>
                </li>
                <li class="nav-item navigation">
-                  <a class="nav-link" href="#">Time Line</a>
+                  <a class="nav-link" href="{{url('/admin/payment')}}">Payment</a>
                </li>
                <li class="nav-item navigation">
-                  <a class="nav-link" href="#">Payment</a>
-               </li>
-               <li class="nav-item navigation">
-                  <a class="nav-link" href="#">Logout</a>
+                  <a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout</a>
+                  <form id="logout-form" method="post" style="display:none;" action="{{route('logout')}}">@csrf</form>
                </li>
             </ul>
          </div>
