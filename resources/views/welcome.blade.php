@@ -153,6 +153,102 @@
         </div>
     </div>
 
+    <div class="supporter">
+        <div class="upper-container">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/binus-logo-png.png" class="img-fluid supporter-binus-img">
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="row pt-md-5">
+                        <div class="offset-md-4 col-md-2">
+                            <img src="images/facebook.png" class="supporter-img">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="images/instagram.png" class="supporter-img">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="images/twitter.png" class="supporter-img">
+                        </div>
+                        <div class="col-md-2">
+                            <img src="images/youtube.png" class="supporter-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-md-3">
+            <div class="col-md-2">
+                <h4>Sponsors</h4>
+            </div>
+
+            <div class="offset-md-6 col-md-2">
+                <h4>Supported By</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="images/gojek.png">
+                <img src="images/bukalapak.png" class="pt-md-4" width="330">
+                <img src="images/microsoft.png" height="130" width="330">
+                <img src="images/cloudflare.png" height="100">
+            </div>
+            <div class="offset-md-4 col-md-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="images/bekraf.png" height="150">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/kemkominfo.png" height="150">
+                    </div>
+                </div>
+                <h4 class="mt-md-3">Media Partner</h4>
+                <div class="row">
+                    <div class="col">
+                        <img src="images/dailysocial.png" height="55">
+                    </div>
+
+                    <div class="col">
+                        <img src="images/kompas.png" width="200" class="pt-md-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <img src="images/codepolitan.png" width="250">
+                    </div>
+
+                    <div class="col">
+                        <img src="images/linetoday.png" width="100">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <img src="images/dicoding.png" width="230">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="images/binus-logo-png.png" width="130">
+                </div>
+                <div class="col-md-4 footer-text">
+                    © Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div class="footer-text offset-md-5 col-md-1" style="text-decoration: underline;">
+                    contacts
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.slim.min.js"></script>

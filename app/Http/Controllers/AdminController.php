@@ -47,7 +47,7 @@ class AdminController extends Controller
         return redirect('admin/role');
     }
     public function payment() {
-        $users = User::all();
+        $users = Role::where('name','User')->first()->users()->orderBy('name','desc')->get();
         return view('payment',compact('users'));
     }
 }
