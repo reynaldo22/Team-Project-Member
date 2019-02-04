@@ -1,0 +1,160 @@
+*{
+	font-family: Raleway;
+	color: #23577c;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #23577c;
+}
+
+.navigation {
+	color :#eeedeb;
+}
+
+/*landing*/
+
+.landing{
+	height: auto;
+	margin-bottom: 100px;
+}
+
+.home-image{
+	width: 500px;
+	height: 500px;
+}
+
+.landing-text{
+	margin-top: 90px;
+}
+
+.landing-text > span{
+	font-size: 35px;
+	color:#eeedeb;
+}
+
+/*Competetion*/
+
+.business-idea{
+	padding-top: 450px;
+}
+
+.competition{
+	/*width: 100%;*/
+	height: auto;
+	background-color: #eeedeb;
+}
+
+
+.mid-text{
+	padding-top: 330px;
+}
+
+.blue{
+	width: 230px;
+	height: 10px;
+	background-color: #005A9C;
+}
+
+.brown{
+	width: 230px;
+	height: 10px;
+	background-color: #60a3bc;	
+}
+
+/*timeline*/
+
+.timeline-background{
+	min-height: 100%;
+	height: auto;
+}
+
+.timeline > h1{
+	text-align: center;
+	color: #eeedeb;	
+	margin-bottom: 30px; 
+}
+
+.timeline-content{
+	margin-top: 250px;
+}
+
+.timeline > .timeline-content > p {
+	text-align: center;
+	color: #eeedeb;
+	width: auto;
+	margin-bottom: 30px; 
+}
+
+
+.timeline-block {
+	background-color: #eeedeb;
+	height: 10px;
+	z-index: 1;
+}
+
+.timeline-text{
+	color: #eeedeb;
+}
+
+.timeline-block > ul{
+	list-style-type: none;
+	/*margin: 0 auto;*/
+	width: auto;
+	height: inherit;
+	padding-left: 0;
+}
+
+
+.bullet{
+	border-radius: 100%;
+	position: relative;
+	cursor: pointer;
+	bottom: 10px;
+	width: 35px;
+	height: 35px;
+	box-sizing: border-box;
+	margin-right: 145px; 
+	background-color: #23577c;
+	border:5px solid #636e72;
+	display: inline-block;
+	z-index: 2;
+}
+
+.last{
+	margin-right: 0 !important;
+}
+
+.text-timeline{
+	color: #eeedeb;
+	font-weight: bold;
+}
+
+.text-position-timeline{
+	margin-right: 105px;
+}
+
+.join-us{
+	background-color: #eeedeb;
+	width: auto;
+	height: 100%;
+}
+
+.joinus-image{
+	width: 310px;
+	height: 445px;
+	margin-top: 110px;
+}
+
+.joinus-text-container{
+	padding-top: 110px;
+}
+
+.joinus-text-container > h1{
+	margin-bottom: 260px;
+}
+
+.joinus-text{
+	/*margin-top: 20px;*/
+	font-size: 25px;
+}
