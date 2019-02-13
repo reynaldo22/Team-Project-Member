@@ -21,9 +21,18 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $userAdmin = User::create ([
+            'username' => 'Admin',
+            'password' => bcrypt('admin'),
+            'sekolah' => '-',
             'name' => 'Admin',
             'email' => 'admin@bncc.net',
-            'password' => bcrypt('admin'),
+            'ktp' => '-',
+            'name1' => '-',
+            'email1' => '-',
+            'ktp1' => '-',
+            'name2' => '-',
+            'email2' => '-',
+            'ktp2' => '-',
         ]);
 
         $userAdmin->roles()->attach($roleAdmin->id);

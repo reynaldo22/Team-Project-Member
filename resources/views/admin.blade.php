@@ -20,9 +20,18 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Nama</th>
-                <th>Email</th>
+                <th>Username</th>
                 <th>Password</th>
+                <th>Sekolah</th>
+                <th>Nama Ketua</th>
+                <th>Email Ketua</th>
+                <th>KTP ketua</th>
+                <th>Nama Anggota 1</th>
+                <th>Email Anggota 1</th>
+                <th>KTP Anggota 1</th>
+                <th>Nama Anggota 2</th>
+                <th>Email Anggota 2</th>
+                <th>KTP Anggota 2</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -30,9 +39,18 @@
             @foreach($data as $d)
             <tr>
                 <td>{{$d->id}}</td>
+                <td>{{$d->username}}</td>
+                <td>{{$d->password}}</td>
+                <td>{{$d->sekolah}}</td>
                 <td>{{$d->name}}</td>
                 <td>{{$d->email}}</td>
-                <td>{{$d->password}}</td>
+                <td>{{$d->ktp}}</td>
+                <td>{{$d->name1}}</td>
+                <td>{{$d->email1}}</td>
+                <td>{{$d->ktp1}}</td>
+                <td>{{$d->name2}}</td>
+                <td>{{$d->email2}}</td>
+                <td>{{$d->ktp2}}</td>
                 <td><a href="{{url('admin/'.$d->id.'/edit')}}">Edit</a> | <a href="{{url('admin/users/'.$d->id.'/delete')}}">Delete</a></td>
             </tr> 
             @endforeach
