@@ -18,7 +18,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home/payment','HomeController@payment');
+Route::get('/home/pay','HomeController@payment');
+Route::post('/home/pay', 'HomeController@paymentUpload');
 //Admin
 Route::get('/admin','AdminController@index')->middleware('auth','checkAdmin'); // check admin
 Route::get('/admin/{id}/edit','AdminController@edit')->middleware('auth','checkAdmin'); // check admin

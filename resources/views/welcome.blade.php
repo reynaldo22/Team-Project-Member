@@ -25,10 +25,10 @@
                     <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item navigation">
-                    <a class="nav-link" href="#">Competition</a>
+                    <a class="nav-link" href="{{url('/home')}}">Competition</a>
                 </li>
                 <li class="nav-item navigation">
-                    <a class="nav-link" href="#">Join Us</a>
+                    <a class="nav-link" href="{{url('/home/pay')}}">Payment</a>
                 </li>
                 @if (Route::has('login')) @auth
                 <li class="nav-item dropdown">

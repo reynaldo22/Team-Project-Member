@@ -42,7 +42,7 @@
                   <a class="nav-link" href="#">Time Line</a>
                </li>
                <li class="nav-item navigation">
-                  <a class="nav-link" href="{{url('home/payment')}}">Payment</a>
+                  <a class="nav-link" href="{{url('home/pay')}}">Payment</a>
                </li>
 
                <li class="nav-item dropdown">
