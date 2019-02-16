@@ -78,7 +78,7 @@
                   <img src="images/computer.png" class="img-fluid image-competition">
                    <div class="row">
                       <div class="col mt-md-2 pr-md-5">
-                        <span class="text-competetion">Hackathon</span>
+                        <span class="text-competetion"><a href="{{url('home/soalHackathon')}}" style="text-decoration:none;">Hackathon</a></span>
                       </div>
                    </div>
                </div>
@@ -89,7 +89,7 @@
                    <img src="images/Business-concept.png" class="img-fluid image-competition">
                    <div class="row">
                       <div class="col mt-md-2">
-                        <span class="text-competetion">Business Concept</span>
+                        <span class="text-competetion"><a href="{{url('home/soalBisnis')}}" style="text-decoration:none;">Business Concept</a></span>
                       </div>
                    </div>
                </div>

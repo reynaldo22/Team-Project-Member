@@ -12,6 +12,7 @@
         <li><a href="{{url('/home')}}">Home</a></li>
         <li><a href="{{url('/admin/role')}}">Role</a></li>
         <li><a href="{{url('/admin/payment')}}">Payment</a></li>
+        <li><a href="{{url('/admin/soal')}}">Soal</a></li>
     </ul>
 
     <h1>All users</h1>
@@ -32,6 +33,7 @@
                 <th>Nama Anggota 2</th>
                 <th>Email Anggota 2</th>
                 <th>KTP Anggota 2</th>
+                <th>Payment</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -51,6 +53,7 @@
                 <td>{{$d->name2}}</td>
                 <td>{{$d->email2}}</td>
                 <td>{{$d->ktp2}}</td>
+                <td>{{$d->paymenyt}}</td>
                 <td><a href="{{url('admin/'.$d->id.'/edit')}}">Edit</a> | <a href="{{url('admin/users/'.$d->id.'/delete')}}">Delete</a></td>
             </tr> 
             @endforeach

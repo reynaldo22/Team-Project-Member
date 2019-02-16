@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Soal;
 use Auth;
 
 class HomeController extends Controller
@@ -53,5 +54,23 @@ class HomeController extends Controller
         // dd($new_name);
 
         return back()->with('success', 'Image Uploaded Successfully')->with('path', $new_name);
+    }
+
+    public function showSoalHackathon() {
+        return view('soalHackathon');
+    }
+
+    public function printSoalHackathon() {
+        $soal = Soal::all()->where('id_soal',1);
+        return view('soalHackathon',compact('soal'));
+    }
+
+    public function showSoalBisnis() {
+        return view('soalBisnis');
+    }
+
+    public function printSoalBisnis() {
+        $soalb = Soal::all()->where('id_soal',2);
+        return view('soalBisnis',compact('soalb'));
     }
 }

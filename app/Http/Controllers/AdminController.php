@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Role;
+use App\Soal;
+
 class AdminController extends Controller
 {
     public function index() {
@@ -50,4 +52,32 @@ class AdminController extends Controller
         $users = Role::where('name','User')->first()->users()->orderBy('name','desc')->get();
         return view('payment',compact('users'));
     }
+
+    // SOAL
+
+    public function soal() {
+        $soal = Soal::all();
+        return view('soal',compact('soal'));
+    }
+
+    public function soalEdit($id) {
+        $editSoal = Soal::find($id);
+        return view('editSoal',compact('editSoal'));
+    }
+
+    public function updateSoal(Request $request, $id) {
+        $soals = Soal::find($id);
+        $data = [
+            'id_soal' => $request->input('id_soal'),
+            'path' => $request->input('path'),
+        ];
+        $soals->update($data);
+        return redirect('/admin/soal');
+    }
+
+    public function destroySoal($id) {
+        Soal::destroy($id);
+        return redirect('/admin/soal');
+    }
+
 }
