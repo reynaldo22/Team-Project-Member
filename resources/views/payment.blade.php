@@ -8,7 +8,7 @@
       <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
       <!--  Our CSS -->
       <link rel="stylesheet" type="text/css" href="../css/payment.css">
-      <title>Project</title>
+      <title>Payment</title>
    </head>
    <body>
       <!-- Navigation Bar -->
@@ -45,11 +45,21 @@
               <tr>
                  <th scope="row">{{$user->id}}</th>
                  <td>{{$user->name}}</td></td>
-                 <td><a href="#">download receipt</a></td>
+                 @if($user->paymenyt == NULL)
+                 <td>User did not upload</td>
+                 @else
+                 <td><a href="../images/{{$user->paymenyt}}" download>Download</a></td> 
+                 @endif
                  <td>
-                    <span class="shadow-lg checkbox-white verify">
-                       Verificate
-                    </span>
+                 @if($user->verified == 1)
+                 <span class="shadow-lg checkbox-green verify">Verified</span>
+                 @else
+                 <form action="{{url('/admin/'.$user->id.'/verifPayment')}}" method="post">
+                    @csrf
+                    <input type="hidden" id="verified" name="verified" value="1">
+                    <input class="shadow-lg checkbox-white verify" type="submit" value="Verificate">
+                  </form>
+                  @endif
                  </td>
               </tr>
               @endforeach
@@ -63,6 +73,5 @@
       <script src="../js/jquery-3.3.1.slim.min.js"></script>
       <script src="../https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
       <script src="../js/bootstrap.min.js"></script>
-      <script src="../js/payment.js"></script>
    </body>
 </html>

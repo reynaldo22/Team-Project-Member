@@ -53,6 +53,25 @@ class AdminController extends Controller
         return view('payment',compact('users'));
     }
 
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\User  $users
+     * @return \Illuminate\Http\Response
+     */
+
+    public function verifPayment(Request $request, $id) {
+        $users = User::find($id);
+        //dd($users);
+        $data = [
+            'verified' => $request->input('verified')
+        ];
+        //dd($data);
+        $users->update($data);
+        return redirect('admin/payment');
+    }
+
     // SOAL
 
     public function soal() {
@@ -74,10 +93,39 @@ class AdminController extends Controller
         $soals->update($data);
         return redirect('/admin/soal');
     }
+    
 
     public function destroySoal($id) {
         Soal::destroy($id);
         return redirect('/admin/soal');
+    }
+
+    public function addSoal(Request $request)
+    {
+        // Soal::create($request->only('title','content','user_id'));
+        $this->validate($request, [
+            'id_soal' => 'required',
+            'path' => 'required|file|mimes:pdf',
+        ]);
+
+        if($request->hasFile('path')) {
+            $fileExt = $request->file('path')->getClientOriginalName();
+            $fileName = pathinfo($fileExt,PATHINFO_FILENAME);
+            $ext = $request->file('path')->getClientOriginalExtension();
+            $store = $fileName. '.' .$ext;
+            $upload = $request->file('path')->move(public_path('soal'),$store);
+        } else {
+
+        }
+
+        $soal = new Soal;
+        $soal->id_soal = $request->input('id_soal');
+        $soal->path = $store;
+        $soal->save();
+
+        return back()->with('success', 'File Uploaded Successfully');
+    
+    
     }
 
 }

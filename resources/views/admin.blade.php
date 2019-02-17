@@ -53,7 +53,7 @@
                 <td>{{$d->name2}}</td>
                 <td>{{$d->email2}}</td>
                 <td>{{$d->ktp2}}</td>
-                <td>{{$d->paymenyt}}</td>
+                <td><img width="200" height="150" src="images/{{$d->paymenyt}}" alt=""></td>
                 <td><a href="{{url('admin/'.$d->id.'/edit')}}">Edit</a> | <a href="{{url('admin/users/'.$d->id.'/delete')}}">Delete</a></td>
             </tr> 
             @endforeach
