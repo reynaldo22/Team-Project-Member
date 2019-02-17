@@ -16,7 +16,8 @@ class CheckPayment
      */
     public function handle($request, Closure $next)
     {
-        if($request->verified == 0) {
+        $user = Auth::user();
+        if($user->verified == 0) {
             return redirect('home/pay');
         }
         return $next($request);

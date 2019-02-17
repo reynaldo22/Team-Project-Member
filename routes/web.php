@@ -24,6 +24,8 @@ Route::get('/home/soalHackathon','HomeController@showSoalHackathon')->middleware
 Route::get('/home/soalHackathon','HomeController@printSoalHackathon')->middleware('checkPayment'); // check payment;
 Route::get('/home/soalBisnis','HomeController@showSoalBisnis')->middleware('checkPayment'); // check payment;;
 Route::get('/home/soalBisnis','HomeController@printSoalBisnis')->middleware('checkPayment'); // check payment;;
+Route::post('/home/soalHackathon', 'HomeController@uploadJawaban');
+Route::post('/home/soalBisnis', 'HomeController@uploadJawaban2');
 
 //Admin
 Route::get('/admin','AdminController@index')->middleware('auth','checkAdmin'); // check admin

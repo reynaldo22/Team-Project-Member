@@ -23,8 +23,24 @@
 
 <div class="container">
 @foreach($soal as $s)
-  <h1 align="center">Download <a href="/soal/{{$s->path}}" download>here</a></h1>
+  <h1 align="center">Download<a href="/soal/{{$s->path}}" download> soal</a></h1>
 @endforeach
+<br>
+  <h1>Upload jawaban</h1>
+  @if (count($errors) > 0)
+  Upload validation <br><br>
+  <ul>
+      @foreach ($errors->all() as $error)
+       <li>{{ $error }}</li>
+      @endforeach
+  </ul>
+  @endif
+  <form method="post" action="{{url('/home/soalHackathon')}}" enctype="multipart/form-data">
+    @csrf
+    <input type="file" name="jawaban" id="jawaban"><br>
+    <input type="submit" value="Upload"><br>
+    <span>zip,rar</span>
+  </form>
 </div>
 
  </body>

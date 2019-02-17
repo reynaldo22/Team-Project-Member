@@ -73,4 +73,41 @@ class HomeController extends Controller
         $soalb = Soal::all()->where('id_soal',2);
         return view('soalBisnis',compact('soalb'));
     }
+
+    public function uploadJawaban(Request $request) {
+
+        $this->validate($request,[
+            'jawaban' => 'required|file|mimes:zip,rar|max:1024'
+        ]);
+
+        $jawaban = $request->file('jawaban');
+
+        $new_name = 'hackathon' . '.' . $jawaban->getClientOriginalExtension();
+   
+        $jawaban->move(public_path('jawaban'), $new_name);
+
+        Auth::User()->update(['jawaban' => $new_name]);
+        // dd($new_name);
+
+        return back()->with('success', 'Jawaban Uploaded Successfully');
+    }
+
+    public function uploadJawaban2(Request $request) {
+
+        $this->validate($request,[
+            'jawaban' => 'required|file|mimes:zip,rar|max:1024'
+        ]);
+
+        $jawaban = $request->file('jawaban');
+
+        $new_name = 'bisnis' . '.' . $jawaban->getClientOriginalExtension();
+   
+        $jawaban->move(public_path('jawaban'), $new_name);
+
+        Auth::User()->update(['jawaban' => $new_name]);
+        // dd($new_name);
+
+        return back()->with('success', 'Jawaban Uploaded Successfully');
+    }
+
 }

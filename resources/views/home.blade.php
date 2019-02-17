@@ -33,13 +33,7 @@
                   <a class="nav-link" href="{{url('/')}}">Home</a>
                </li>
             <li class="nav-item navigation">
-                  <a class="nav-link" href="#">Competetion <span class="sr-only">(current)</span></a>
-               </li>
-               <li class="nav-item navigation">
-                  <a class="nav-link" href="#">Team Search</a>
-               </li>
-               <li class="nav-item navigation">
-                  <a class="nav-link" href="#">Time Line</a>
+                  <a class="nav-link" href="{{url('/home')}}">Competetion <span class="sr-only">(current)</span></a>
                </li>
                <li class="nav-item navigation">
                   <a class="nav-link" href="{{url('home/pay')}}">Payment</a>

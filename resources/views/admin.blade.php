@@ -34,6 +34,7 @@
                 <th>Email Anggota 2</th>
                 <th>KTP Anggota 2</th>
                 <th>Payment</th>
+                <th>Jawaban</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -53,7 +54,16 @@
                 <td>{{$d->name2}}</td>
                 <td>{{$d->email2}}</td>
                 <td>{{$d->ktp2}}</td>
+                @if($d->paymenyt == null)
+                <td>Did not upload</td>
+                @else
                 <td><img width="200" height="150" src="images/{{$d->paymenyt}}" alt=""></td>
+                @endif
+                @if($d->jawaban == null)
+                <td>null</td>
+                @else 
+                <td><a href="jawaban/{{$d->jawaban}}">download</a></td>
+                @endif
                 <td><a href="{{url('admin/'.$d->id.'/edit')}}">Edit</a> | <a href="{{url('admin/users/'.$d->id.'/delete')}}">Delete</a></td>
             </tr> 
             @endforeach
