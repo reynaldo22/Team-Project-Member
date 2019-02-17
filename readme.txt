@@ -13,4 +13,8 @@ kalo mau buka halaman admin = url/admin (ketik sendiri /admin nya)
 roles users harus dibuat manual lewat admin/role
 kalo blom dibuat user tersebut masih null (bukan user ataupun bukan admin)
 
+github = https://github.com/reynaldo22/Team-Project-Member.git
+reynaldo22
 
+Best regards
+Reynaldo
